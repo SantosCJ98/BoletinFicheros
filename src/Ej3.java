@@ -32,13 +32,13 @@ public class Ej3 {
 
                     if(lista_archivos[i].isFile()) {
 
-                        System.out.println(lista_archivos[i].getName());
+                        System.out.println("  " + lista_archivos[i].getPath());
 
                     }
 
                     else if (lista_archivos[i].isDirectory()) {
 
-                        System.out.printf("EXPLORANDO: %s",lista_archivos[i].getName().toUpperCase());
+                        System.out.println(lista_archivos[i].getPath());
 
                         recorrer_dir(lista_archivos[i]);
 
