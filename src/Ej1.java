@@ -17,7 +17,7 @@ public class Ej1 {
         if (archivo.isFile() && archivo.exists()) {
 
             System.out.printf("Nombre: %s\n¿Ejecutable?: %s\n¿Oculto?: %s\nRuta relativa: %s\nRuta absoluta: %s\nTamaño: %d KBs",
-                    archivo.getName(), esExe(archivo) ? "Sí" : "No", archivo.isHidden() ? "Sí" : "No", archivo.getPath(),
+                    archivo.getName(), archivo.canExecute() ? "Sí" : "No", archivo.isHidden() ? "Sí" : "No", archivo.getPath(),
                     archivo.getAbsolutePath(), archivo.length() / 1024);
 
         }
@@ -36,25 +36,6 @@ public class Ej1 {
 
 
 
-
-
-    }
-
-
-    public static boolean esExe (File archivo) {
-
-        String extension = archivo.getName().substring(archivo.getName().length() - 3, archivo.getName().length());
-
-        System.out.println(extension);
-
-        if (extension.equals("exe")) {
-
-            return true;
-
-        } else {
-
-            return false;
-        }
 
 
     }
